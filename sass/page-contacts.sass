@@ -1,0 +1,337 @@
+@import 'responsive'
+
+.breadcrumbs
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	font-size: 14px
+	color: #fff
+	margin: 0 -7px
+	margin-bottom: 15px
+
+	& > span
+		margin: 0 7px
+
+	a,
+	span
+		font-size: 14px
+		line-height: 1.7
+		color: #fff
+		text-transform: uppercase
+
+	 a:hover span
+		color: #e17358
+
+
+.page-contacts
+	&__list
+		margin-bottom: 15px
+		li
+			display: inline-block
+			text-transform: uppercase
+			a
+				position: relative
+				margin-right: 7px
+				transition: 0.3s color
+				&:hover
+					
+				&:after
+					margin-left: 9px
+					content: '/'
+					color: #fff
+		li, a
+			font-size: 14px
+			line-height: 1.7
+			color: #fff
+
+	&__title
+		font-size: 36px
+		font-weight: 900
+		line-height: 1
+		color: #fff
+		text-transform: uppercase
+		padding-bottom: 45px
+		+media(xs)
+			font-size: 24px
+
+	&__item
+		display: flex
+		+media(sm)
+			flex-wrap: wrap
+
+	&__col
+		margin-bottom: 50px
+		+media(md)
+			margin-bottom: 40px
+		+media(sm)
+			margin-bottom: 35px
+		&--text
+			width: 375px
+			background-color: #e17358
+			padding: 30px
+			padding-bottom: 70px
+			margin-right: 40px
+			+media(sm)
+				width: 100%
+				padding: 25px
+				margin-right: 0px
+
+		&--map
+			width: calc(100% - 375px)
+			+media(sm)
+				width: 100%
+
+			iframe
+				display: block
+				border: none
+				outline: none
+				width: 100%
+				height: 100%
+				+media(sm)
+					min-height: 300px
+					max-height: 80vh
+
+	&__subtitle
+		font-size: 30px
+		line-height: 1.2
+		color: #fff
+		font-weight: 900
+		text-transform: uppercase
+		padding-bottom: 20px
+		span
+			font-size: 18px
+			font-weight: normal
+
+	&__content
+		display: flex
+		align-items: center
+		margin-bottom: 15px	
+		&--address
+			align-items: flex-start
+			i
+				padding-top: 10px
+
+	&__icon
+		max-width: 20px
+		width: 100%	
+		display: flex
+		justify-content: center
+		margin-right: 15px
+		i
+			margin-top: -1px
+			display: block
+			font-size: 18px
+			color: #fff
+
+	&__data
+		p
+			font-size: 18px
+			line-height: 1.3
+			color: #fff
+			text-transform: uppercase
+
+	&__info
+		display: flex
+		align-items: center
+		padding-top: 10px
+		padding-bottom: 30px
+		+media(sm)
+			flex-direction: column
+
+	&__our
+		font-size: 30px
+		color: #fff
+		line-height: 1
+		margin-top: 5px
+		text-transform: uppercase
+		font-weight: 900
+		padding-right: 40px
+		+media(md)
+			font-size: 24px
+			padding-right: 25px
+		+media(sm)
+			font-size: 22px
+			padding-right: 0px
+			padding-bottom: 8px
+
+	&__chats
+		font-size: 36px
+		line-height: 1
+		color: #fff
+		text-transform: uppercase
+		+media(md)
+			font-size: 30px
+		+media(sm)
+			font-size: 25px
+			text-align: center
+		span
+			display: inline-flex
+			font-size: 30px
+			font-weight: 700
+			margin-right: 15px
+			+media(md)
+				font-size: 27px
+			+media(sm)
+				font-size: 24px
+
+		b
+			font-weight: 900
+			+media(xxs)
+				display: block
+				margin-top: 5px
+
+
+.social
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-left: 15px
+		margin: 0 -20px
+		+media(smx)
+			margin: 0px
+
+		&--block
+			padding-left: 0
+			margin: 50px auto 0
+			width: 100%
+			justify-content: center
+			+media(smx)
+				margin-top: 50px
+
+	&__item
+		display: block
+		margin: 0 20px
+		margin-bottom: 40px
+
+		&:hover
+			i, p
+				color: rgba(255, 255, 255, 0.5)
+		i
+			font-size: 75px
+			color: #fff
+			filter: drop-shadow(0 0 5px rgba(#000, 0.3))
+			transition: 0.3s color
+
+		p
+			text-shadow: 0 0 1px rgba(#000, 0.8)
+
+	&__box
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 12px
+
+	&__title
+		font-size: 18px
+		line-height: 1.3
+		color: #fff
+		text-align: center
+		text-transform: uppercase
+		font-weight: normal
+		transition: 0.3s color
+		+media(sm)
+			font-size: 17px
+
+	&__whatsapp
+		i, p
+			color: #2ab200
+
+		&:hover
+			i, p
+				color: rgba(#2ab200, 0.5)
+
+	&__viber
+		i, p
+			color: #7b519c
+
+		&:hover
+			i, p
+				color: rgba(#7b519c, 0.5)
+
+	&__telegram
+		i, p
+			color: #2ca5e0
+
+		&:hover 
+			i, p
+				color: rgba(#2ca5e0, 0.5)
+
+
+.meta
+	margin-bottom: 60px
+	&__wrap
+		display: flex
+		align-items: center
+		background-color: #fff
+		padding: 20px 25px
+		+media(md)
+			padding: 20px 15px
+		+media(sm)
+			display: block
+
+	&__info
+		display: flex
+		justify-content: center
+		text-align: center
+		margin: 20px 0 25px
+		+media(mdx)
+			flex-direction: column
+
+		p:not(:first-child)
+			margin-left: 30px
+			+media(mdx)
+				margin-left: 0
+
+		p
+			font-weight: 900
+			font-size: 30px
+			text-transform: uppercase
+			color: #fff
+			+media(xs)
+				font-size: 24px
+			+media(xxs)
+				font-size: 22px
+
+			span
+				+media(mini)
+					display: block
+
+	&__text
+		font-size: 30px
+		line-height: 1
+		color: #e17358
+		text-transform: uppercase
+		font-weight: 900
+		padding-right: 40px
+		+media(mdx)
+			font-size: 25px
+			padding-right: 20px
+		+media(md)
+			font-size: 20px
+			padding-right: 10px
+		+media(sm)
+			padding-bottom: 15px
+
+	&__btn
+		cursor: pointer
+		max-width: 320px
+		width: 100%
+		font: inherit
+		display: block
+		font-size: 18px
+		line-height: 1.3
+		color: #ffffff
+		background-color: #e17358
+		border: none
+		outline: none
+		border-radius: 5px
+		padding: 13px 10px
+		padding-bottom: 14px	
+		text-transform: uppercase
+		transition: 0.3s background-color
+		+media(md)
+			max-width: 300px
+		+media(sm)
+			font-size: 17px
+		&:hover
+			background-color: #592e23

@@ -1,0 +1,282 @@
+@import 'responsive'
+
+.alignleft
+	display: inline
+	float: left
+	margin-right: 1.5em
+	margin-bottom: 1em
+
+.alignright
+	display: inline
+	float: right
+	margin-left: 1.5em
+	margin-bottom: 1em
+
+.aligncenter
+	clear: both
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+.editor
+	color: #fff
+
+	&:before,
+	&:after
+		content: ""
+		display: table
+		table-layout: fixed
+
+	&:after
+		clear: both
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		margin: 1em 0
+		font-weight: 900
+		text-transform: uppercase
+		text-align: center
+
+	h1, 
+	h2
+		font-size: 36px
+		+media(xs)
+			font-size: 26px
+
+	h3
+		font-size: 30px
+		+media(xs)
+			font-size: 22px
+
+	h4, 
+	h5, 
+	h6
+		font-size: 24px
+		+media(xs)
+			font-size: 18px
+
+	p
+		font-size: 16px
+		line-height: 1.5
+		color: #fff
+		margin-bottom: 1em
+		text-align: justify
+
+	a
+		color: #e17358
+		transition: 0.2s ease-out
+		text-decoration: underline
+
+		&:hover 
+			text-decoration: none
+
+	ul, ol
+		margin: 1.5em 0
+		padding-left: 30px
+
+	ul li
+		list-style: disc
+		margin-bottom: 1em
+		line-height: 1.5
+
+	ol li
+		margin-bottom: 1em
+		line-height: 1.5
+
+	ul li:last-of-type,
+	ol li:last-of-type
+		margin-bottom: 0
+
+	blockquote
+		border: 2px dashed #e17358
+		padding: 30px
+		font-style: italic
+		margin: 2em 0
+		+media(xs)
+			padding: 15px
+
+		p:last-of-type
+			margin-bottom: 0
+
+	img, img.aligncenter
+		display: block
+		margin: 2em auto
+
+	img
+		&.alignleft
+			display: inline
+			float: left
+			margin: 0 1.5em 1em 0
+			+media(lgs)
+				float: none
+				display: block
+				margin: 2em auto
+
+		&.alignright
+			display: inline
+			float: right
+			margin: 0 0 1em 1.5em
+			+media(lgs)
+				float: none
+				display: block
+				margin: 2em auto
+
+
+		&.aligncenter
+			clear: both
+			display: block
+			margin-left: auto
+			margin-right: auto
+
+	table 
+		// min-width: 600px
+		width: 100%
+
+		thead th,
+		thead td,
+		tbody th,
+		tbody td 
+			font-size: 16px
+			line-height: 1.5
+			padding: 12px 20px
+			border: 1px solid #fff
+			font-weight: normal
+
+		thead td,
+		tbody td 
+			color: #fff
+
+		thead th,
+		thead td 
+			color: #010310
+			background-color: #fff
+			text-transform: uppercase
+
+.about__wrap-table 
+	overflow-x: auto
+	overflow-y: hidden
+	margin: 2em 0
+
+.texty
+	width: 100%
+	margin: 30px 0
+	padding: 0 30px
+	+media(xs)
+		padding: 0 15px
+
+	&-title
+		text-align: center
+		font-size: 24px
+		font-weight: 900
+		color: #e17358
+		text-transform: uppercase
+		margin-bottom: 1em
+
+	&-phone
+		text-align: center
+		margin-bottom: 1em
+
+		a
+			font-size: 24px
+			font-weight: 900
+			color: #e17358
+
+		i
+			font-size: 24px
+			margin-right: 15px
+
+.faq
+	padding: 40px 0
+
+	&-title
+		text-align: center
+		margin-bottom: 30px
+
+	h2
+		font-size: 36px
+		line-height: 1.3
+		color: #fff
+		font-weight: 900
+		text-align: center
+		text-transform: uppercase
+		+media(md)
+			font-size: 30px
+
+	&-items
+		max-width: 1000px
+		margin: 0 auto
+
+	&-item
+		margin-bottom: 20px
+
+		&-header
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.15)
+			background-color: #ffffff
+			padding: 15px 20px
+			padding-right: 45px
+			cursor: pointer
+			transition: .2s ease-out
+			position: relative
+
+			&:after
+				content: ""
+				background-image: url(img/icons/faq-arrow-icon.svg)
+				width: 9px
+				height: 5px
+				position: absolute
+				top: 22px
+				right: 20px
+				transition: .2s ease-out
+
+		&-title
+			p
+				color: #101010
+				font-size: 14px
+				font-weight: 600
+				transition: .2s ease-out
+
+		&-body
+			margin: 20px
+			padding: 15px
+			background-color: #fff
+			display: none
+			+media(xs)
+				margin: 15px 0
+
+			&-inner
+				+media(sm)
+					flex-direction: column
+
+		&-desc
+			padding: 25px
+			+media(xs)
+				padding: 15px
+
+			p
+				color: #101010
+				font-size: 14px
+				font-weight: 500
+
+				&:last-of-type
+					margin-bottom: 0
+
+		&-img
+			+media(sm)
+				text-align: center
+
+.faq-item.active .faq-item-header:after
+	background-image: url(img/icons/faq-arrow-icon-white.svg)
+	transform: rotate(180deg)
+
+.faq-item.active .faq-item-header,
+.faq-item-header:hover
+	background-color: #e17358
+
+.faq-item.active .faq-item-title p,
+.faq-item-header:hover .faq-item-title p
+	color: #fff
+

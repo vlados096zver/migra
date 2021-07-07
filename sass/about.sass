@@ -1,0 +1,98 @@
+@import 'responsive'
+
+.about
+	&__image
+		margin-bottom: 35px
+		img
+			display: block
+
+	&__text
+		padding-bottom: 35px
+		clear: both
+
+		img
+			&.alignleft
+				float: left
+				margin-right: 15px
+				margin-bottom: 10px
+
+			&.alignright
+				float: right
+				margin-left: 15px
+				margin-bottom: 10px
+
+		.about__title
+			font-size: 30px
+			line-height: 1.1
+			color: #fff
+			text-transform: uppercase
+			+media(xs)
+				font-size: 24px
+
+		p
+			font-size: 16px
+			line-height: 1.5
+			color: #fff
+			padding-bottom: 25px
+		h1
+			font-size: 24px
+		h2
+			font-size: 20px
+		h3
+			font-size: 16px
+		h4, h5, h5
+			font-size: 14px
+		h1, h2, h3, h4, h5, h5
+			color: #fff
+			margin: 1em 0
+			text-transform: uppercase
+			font-weight: 700
+		ul, ol
+			margin: 1em 0
+			li
+				color: #fff
+				padding-bottom: 25px
+		a
+			color: #e17358
+			transition: 0.3s color
+			padding-bottom: 10px
+			&:hover
+				text-decoration: underline
+
+	&__wrap-table
+		overflow-x: auto
+		overflow-y: hidden
+		margin-bottom: 50px
+		table
+			min-width: 600px
+			thead, 
+			tbody
+				th, td
+					font-size: 16px
+					line-height: 1.5
+					padding: 12px 20px
+					border: 1px solid #fff
+					font-weight: normal
+				td
+					color: #fff
+
+			thead
+				th, td
+					color: #010310
+					background-color: #fff
+					text-transform: uppercase
+
+				th 
+					text-align: center
+					font-weight: bold
+
+
+			tbody
+				tr:hover
+					background-color: #e17358
+
+			tr:nth-child(odd)
+				background-color: #e17358
+
+				// td
+				// 	color: #000

@@ -1,0 +1,60 @@
+@import 'responsive'
+
+.comment-respond
+	padding-bottom: 95px
+	+media(md)
+		padding-bottom: 50px
+
+.reviews-form
+	&__item
+		margin-bottom: 24px	
+		input,
+		textarea
+			display: block
+			width: 100%
+			background-color: #fff
+			border: 1px solid #808080
+			box-sizing: border-box
+			border-radius: 10px
+			padding: 15px 15px
+			padding-bottom: 14px
+
+		textarea
+			resize: none
+			min-height: 160px
+
+	&__block
+		display: flex
+		justify-content: space-between
+
+	&__required
+		color: #fff
+		text-transform: uppercase
+
+	&__label
+		cursor: pointer
+		user-select: none
+		font-size: 16px
+		line-height: 1.2
+		color: #fff
+		text-transform: uppercase
+
+	&__label,
+	&__required
+		margin-bottom: 8px
+
+.submit
+	cursor: pointer
+	max-width: 300px
+	width: 100%
+	font-size: 16px
+	color: #000
+	background-color: #fff
+	border-radius: 10px
+	text-transform: uppercase
+	padding: 14px 5px
+	padding-bottom: 15px
+	margin-top: 12px
+	transition: 0.3s background-color, 0.3s border
+	&:hover
+		background-color: rgba(255, 255, 255, 0.5)

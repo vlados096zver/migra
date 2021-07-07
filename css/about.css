@@ -1,0 +1,144 @@
+.about__image {
+	margin-bottom: 35px;
+}
+
+.about__image img {
+	display: block;
+}
+
+.about__text {
+	padding-bottom: 35px;
+	clear: both;
+}
+
+.about__text img.alignleft {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+.about__text img.alignright {
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.about__text .about__title {
+	font-size: 30px;
+	line-height: 1.1;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.about__text p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	padding-bottom: 25px;
+}
+
+.about__text h1 {
+	font-size: 24px;
+}
+
+.about__text h2 {
+	font-size: 20px;
+}
+
+.about__text h3 {
+	font-size: 16px;
+}
+
+.about__text h4,
+.about__text h5,
+.about__text h5 {
+	font-size: 14px;
+}
+
+.about__text h1,
+.about__text h2,
+.about__text h3,
+.about__text h4,
+.about__text h5,
+.about__text h5 {
+	color: #fff;
+	margin: 1em 0;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.about__text ul,
+.about__text ol {
+	margin: 1em 0;
+}
+
+.about__text ul li,
+.about__text ol li {
+	color: #fff;
+	padding-bottom: 25px;
+}
+
+.about__text a {
+	color: #e17358;
+	transition: 0.3s color;
+	padding-bottom: 10px;
+}
+
+.about__text a:hover {
+	text-decoration: underline;
+}
+
+.about__wrap-table {
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin-bottom: 50px;
+}
+
+.about__wrap-table table {
+	min-width: 600px;
+}
+
+.about__wrap-table table thead th,
+.about__wrap-table table thead td,
+.about__wrap-table table tbody th,
+.about__wrap-table table tbody td {
+	font-size: 16px;
+	line-height: 1.5;
+	padding: 12px 20px;
+	border: 1px solid #fff;
+	font-weight: normal;
+}
+
+.about__wrap-table table thead td,
+.about__wrap-table table tbody td {
+	color: #fff;
+}
+
+.about__wrap-table table thead th,
+.about__wrap-table table thead td {
+	color: #010310;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+
+.about__wrap-table table thead th {
+	text-align: center;
+	font-weight: bold;
+}
+
+.about__wrap-table table tbody tr:hover {
+	background-color: #e17358;
+}
+
+.about__wrap-table table tr:nth-child(odd) {
+	background-color: #e17358;
+}
+
+@media screen and (max-width: 560px) {
+
+.about__text .about__title {
+	font-size: 24px;
+}
+
+}
+

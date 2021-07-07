@@ -1,0 +1,25 @@
+.search__title {
+	font-size: 36px;
+	line-height: 1;
+	color: #fff;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-bottom: 45px;
+}
+
+.search__title span {
+	font-weight: normal;
+}
+
+.search .blog__item {
+	align-self: end;
+}
+
+@media screen and (max-width: 780px) {
+
+.search__title {
+	font-size: 28px;
+}
+
+}
+

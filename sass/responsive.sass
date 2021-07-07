@@ -1,0 +1,80 @@
+$break_desc: 1600px
+$break_lb: 1475px
+$break_lg: 1430px
+$break_lgm: 1350px
+$break_lgs: 1250px
+$break_lgsm: 1199px
+$break_lgxs: 1150px
+$break_mdx: 1050px
+$break_md: 960px
+$break_smdx: 840px
+$break_sm: 780px
+$break_smx: 650px
+$break_xs: 560px
+$break_xxs: 480px
+$break_mini: 400px
+
+=media($media)
+	@if $media == desc
+		@media screen and (max-width: $break_desc) 
+			@content 
+
+	@else if $media == lb
+		@media screen and (max-width: $break_lb) 
+			@content
+
+	@else if $media == lg
+		@media screen and (max-width: $break_lg) 
+			@content
+
+	@else if $media == lgm
+		@media screen and (max-width: $break_lgm) 
+			@content
+
+	@else if $media == lgsm
+		@media screen and (max-width: $break_lgsm) 
+			@content
+	
+	@else if $media == lgs 
+		@media screen and (max-width: $break_lgs) 
+			@content
+
+	@else if $media == lgxs 
+		@media screen and (max-width: $break_lgxs) 
+			@content
+
+	@else if $media == mdx 
+		@media screen and (max-width: $break_mdx) 
+			@content
+
+	@else if $media == md 
+		@media screen and (max-width: $break_md) 
+			@content
+
+	@else if $media == smdx
+		@media screen and (max-width: $break_smdx) 
+			@content
+
+	@else if $media == sm
+		@media screen and (max-width: $break_sm) 
+			@content
+
+	@else if $media == smx
+		@media screen and (max-width: $break_smx) 
+			@content
+
+	@else if $media == xs 
+		@media screen and (max-width: $break_xs)
+			@content
+
+	@else if $media == xxs 
+		@media screen and (max-width: $break_xxs) 
+			@content
+
+	@else if $media == mini 
+		@media screen and (max-width: $break_mini) 
+			@content
+
+	@else if $media == reverse-md 
+		@media screen and (min-width: $break_md + 1) 
+			@content

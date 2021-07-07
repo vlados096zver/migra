@@ -1,0 +1,178 @@
+@import 'responsive'
+
+.steps
+	padding: 0 0 120px
+
+	&__title
+		font-size: 36px
+		font-weight: 900
+		line-height: 1.65
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 50px
+		color: #fff
+		+media(sm)
+			font-size: 30px
+		+media(xs)
+			font-size: 24px
+
+		span
+			display: block
+			color: #e17358
+
+	&__phone
+		font-size: 48px
+		font-weight: 900
+		line-height: 1.2
+		text-align: center
+		margin-bottom: 50px
+		color: #fff
+		+media(sm)
+			font-size: 36px
+		+media(xs)
+			font-size: 30px
+
+	&__wrap
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		border-bottom: 20px solid #fff
+		background-color: #010310
+		+media(mdx)
+			flex-direction: column
+			border-bottom: 0
+			align-items: center
+			// background-color: transparent
+
+		&:before
+			content: ''
+			position: absolute
+			bottom: -20px
+			left: -30px
+			width: 60px
+			height: 60px
+			border: 20px solid #fff
+			border-radius: 50%
+			z-index: -1
+			+media(mdx)
+				left: 0
+				bottom: -30px
+
+		&:after
+			content: ''
+			position: absolute
+			bottom: -20px
+			right: -197px
+			width: 394px
+			height: 394px
+			border: 20px solid #fff
+			border-radius: 50%
+			z-index: -1
+			+media(mdx)
+				bottom: -30px
+				left: 30px
+				height: 40px
+				width: 85%
+				border-radius: 0
+				border: 0
+				border-bottom: 20px solid #fff
+				background-color: #010310
+
+	&__item
+		position: relative
+		display: flex
+		flex-direction: column
+		width: 20%
+		height: 314px
+		padding: 10px 0 20px
+		margin-bottom: 20px
+		text-align: center
+		color: #fff
+		border-bottom: 20px solid #fff
+		+media(mdx)
+			width: 100%
+			border-bottom: 0
+			border-left: 20px solid #fff
+			margin-bottom: 0
+			padding: 10px 0 60px 40px
+			height: auto
+
+		&:not(:first-child):after
+			content: ''
+			position: absolute
+			bottom: -26px
+			left: calc(50% - 18px)
+			width: 32px
+			height: 32px
+			border: 5px solid #fff
+			background-color: #010310
+			border-radius: 50%
+			+media(mdx)
+				bottom: calc(50% - 18px)
+				left: -26px
+
+		&:last-child
+			+media(mdx)
+				padding-bottom: 100px
+
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0px
+				right: -57px
+				width: 66px
+				height: 90px
+				background-image: url(img/flag.png)
+				+media(mdx)
+					right: -6px
+					bottom: -10px
+
+		&--count
+			font-size: 48px
+			font-weight: 200
+			margin-bottom: 10px
+			padding: 0 10px
+
+		&--step
+			font-size: 24px
+			font-weight: 900
+			text-transform: uppercase
+			margin-bottom: 20px
+			padding: 0 10px
+
+		&--title
+			font-size: 18px
+			font-weight: normal
+			line-height: 1.7
+			margin-bottom: 10px
+			padding: 0 16px
+			+media(lg)
+				font-size: 16px
+			+media(lgs)
+				line-height: 1.5
+				padding: 0 10px
+
+		&--link
+			font-size: 16px
+			color: #e17358
+			margin-top: auto
+
+			&:hover
+				text-decoration: underline
+
+		&--btn
+			font-family: inherit
+			font-size: 18px
+			font-weight: normal
+			line-height: 1
+			color: #fff
+			background-color: #e17358
+			border-radius: 5px
+			padding: 11px 10px
+			margin-top: auto
+			transition: 0.3s background-color
+
+			&:hover
+				background-color: #592e23
+
+

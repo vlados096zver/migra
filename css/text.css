@@ -1,0 +1,365 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.editor {
+	color: #fff;
+}
+
+.editor:before,
+.editor:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.editor:after {
+	clear: both;
+}
+
+.editor h1,
+.editor h2,
+.editor h3,
+.editor h4,
+.editor h5,
+.editor h6 {
+	margin: 1em 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.editor h1,
+.editor h2 {
+	font-size: 36px;
+}
+
+.editor h3 {
+	font-size: 30px;
+}
+
+.editor h4,
+.editor h5,
+.editor h6 {
+	font-size: 24px;
+}
+
+.editor p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	margin-bottom: 1em;
+	text-align: justify;
+}
+
+.editor a {
+	color: #e17358;
+	transition: 0.2s ease-out;
+	text-decoration: underline;
+}
+
+.editor a:hover {
+	text-decoration: none;
+}
+
+.editor ul,
+.editor ol {
+	margin: 1.5em 0;
+	padding-left: 30px;
+}
+
+.editor ul li {
+	list-style: disc;
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+
+.editor ol li {
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+
+.editor ul li:last-of-type,
+.editor ol li:last-of-type {
+	margin-bottom: 0;
+}
+
+.editor blockquote {
+	border: 2px dashed #e17358;
+	padding: 30px;
+	font-style: italic;
+	margin: 2em 0;
+}
+
+.editor blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
+.editor img,
+.editor img.aligncenter {
+	display: block;
+	margin: 2em auto;
+}
+
+.editor img.alignleft {
+	display: inline;
+	float: left;
+	margin: 0 1.5em 1em 0;
+}
+
+.editor img.alignright {
+	display: inline;
+	float: right;
+	margin: 0 0 1em 1.5em;
+}
+
+.editor img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.editor table {
+	width: 100%;
+}
+
+.editor table thead th,
+.editor table thead td,
+.editor table tbody th,
+.editor table tbody td {
+	font-size: 16px;
+	line-height: 1.5;
+	padding: 12px 20px;
+	border: 1px solid #fff;
+	font-weight: normal;
+}
+
+.editor table thead td,
+.editor table tbody td {
+	color: #fff;
+}
+
+.editor table thead th,
+.editor table thead td {
+	color: #010310;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+
+.about__wrap-table {
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 2em 0;
+}
+
+.texty {
+	width: 100%;
+	margin: 30px 0;
+	padding: 0 30px;
+}
+
+.texty-title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 900;
+	color: #e17358;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+.texty-phone {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.texty-phone a {
+	font-size: 24px;
+	font-weight: 900;
+	color: #e17358;
+}
+
+.texty-phone i {
+	font-size: 24px;
+	margin-right: 15px;
+}
+
+.faq {
+	padding: 40px 0;
+}
+
+.faq-title {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.faq h2 {
+	font-size: 36px;
+	line-height: 1.3;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.faq-items {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.faq-item {
+	margin-bottom: 20px;
+}
+
+.faq-item-header {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	background-color: #ffffff;
+	padding: 15px 20px;
+	padding-right: 45px;
+	cursor: pointer;
+	transition: .2s ease-out;
+	position: relative;
+}
+
+.faq-item-header:after {
+	content: "";
+	background-image: url(img/icons/faq-arrow-icon.svg);
+	width: 9px;
+	height: 5px;
+	position: absolute;
+	top: 22px;
+	right: 20px;
+	transition: .2s ease-out;
+}
+
+.faq-item-title p {
+	color: #101010;
+	font-size: 14px;
+	font-weight: 600;
+	transition: .2s ease-out;
+}
+
+.faq-item-body {
+	margin: 20px;
+	padding: 15px;
+	background-color: #fff;
+	display: none;
+}
+
+.faq-item-desc {
+	padding: 25px;
+}
+
+.faq-item-desc p {
+	color: #101010;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.faq-item-desc p:last-of-type {
+	margin-bottom: 0;
+}
+
+.faq-item.active .faq-item-header:after {
+	background-image: url(img/icons/faq-arrow-icon-white.svg);
+	transform: rotate(180deg);
+}
+
+.faq-item.active .faq-item-header,
+.faq-item-header:hover {
+	background-color: #e17358;
+}
+
+.faq-item.active .faq-item-title p,
+.faq-item-header:hover .faq-item-title p {
+	color: #fff;
+}
+
+@media screen and (max-width: 1250px) {
+
+.editor img.alignleft {
+	float: none;
+	display: block;
+	margin: 2em auto;
+}
+
+.editor img.alignright {
+	float: none;
+	display: block;
+	margin: 2em auto;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.faq h2 {
+	font-size: 30px;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.faq-item-body-inner {
+	flex-direction: column;
+}
+
+.faq-item-img {
+	text-align: center;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+
+.editor h1,
+.editor h2 {
+	font-size: 26px;
+}
+
+.editor h3 {
+	font-size: 22px;
+}
+
+.editor h4,
+.editor h5,
+.editor h6 {
+	font-size: 18px;
+}
+
+.editor blockquote {
+	padding: 15px;
+}
+
+.texty {
+	padding: 0 15px;
+}
+
+.faq-item-body {
+	margin: 15px 0;
+}
+
+.faq-item-desc {
+	padding: 15px;
+}
+
+}
+

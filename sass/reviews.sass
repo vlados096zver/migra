@@ -1,0 +1,51 @@
+@import 'responsive'
+
+.reviews
+
+	&__title
+		font-size: 36px
+		line-height: 1
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 45px
+		font-weight: 200
+		+media(sm)
+			font-size: 28px
+
+	&__wrap
+		padding-bottom: 40px
+
+	&__item
+		border-radius: 10px
+		padding: 20px
+		margin-bottom: 30px
+		&--answer
+			margin-left: 45px
+
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+
+	&__fio,
+	&__date
+		font-size: 16px
+		line-height: 1.5
+		padding-bottom: 8px
+		font-weight: 700	
+
+	&__fio
+		color: #fff
+		margin-right: 13px
+
+	&__date
+		color: #fff
+
+	&__text
+		p
+			font-size: 16px
+			line-height: 1.9
+			color: #fff
+			+media(sm)
+				line-height: 1.6
