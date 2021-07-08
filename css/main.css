@@ -68,6 +68,19 @@ img {
 	color: #fff;
 }
 
+.box--holder {
+	margin-top: 40px;
+}
+
+.box--holder .box__wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box--holder .box__item {
+	width: calc(100% / 4);
+}
+
 .box__circle {
 	display: flex;
 	align-items: center;
@@ -402,6 +415,10 @@ img {
 	font-size: 20px;
 	text-align: center;
 	padding: 0 10px;
+}
+
+.info--price {
+	margin-bottom: 40px;
 }
 
 .info__title {
@@ -1143,6 +1160,7 @@ img {
 }
 
 .numbers__bg {
+	background-image: url(https://migraplus.ru/wp-content/themes/migraplus/img/sea_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -1303,6 +1321,10 @@ body {
 	max-width: 450px;
 }
 
+.box--holder .box__item {
+	width: calc(100% / 2);
+}
+
 }
 
 @media screen and (max-width: 960px) {
@@ -1424,6 +1446,12 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+
+.box--holder .box__item {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
 
 .data {
 	padding-bottom: 55px;

@@ -75,6 +75,21 @@ img
 			width: 100%
 			margin: 25px 0
 
+	&--holder
+		margin-top: 40px
+		.box__wrap
+			display: flex
+			flex-wrap: wrap
+
+		.box__item
+			width: calc(100% / 4)
+			+media(mdx)
+				width: calc(100% / 2)
+			+media(sm)
+				width: 100%
+				margin: 0 auto
+				margin-bottom: 40px
+
 	&__circle
 		display: flex
 		align-items: center
@@ -467,6 +482,9 @@ img
 				word-break: break-word
 
 .info
+	&--price
+		margin-bottom: 40px
+
 	&__title
 		font-size: 30px
 		line-height: 1
@@ -1231,6 +1249,7 @@ img
 	margin: 80px 0	
 
 	&__bg
+		background-image: url(https://migraplus.ru/wp-content/themes/migraplus/img/sea_bg.jpg)
 		background-repeat: no-repeat
 		background-size: cover
 		background-position: top center

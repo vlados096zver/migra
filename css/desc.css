@@ -1,0 +1,174 @@
+.desc__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.desc__block {
+	display: flex;
+	align-items: center;
+}
+
+.desc__data,
+.desc__update {
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.desc__data {
+	margin-right: 25px;
+}
+
+.desc__title {
+	font-size: 36px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	font-weight: 900;
+}
+
+.desc__holder {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.desc__image {
+	width: 400px;
+}
+
+.desc__image img {
+	display: block;
+}
+
+.desc__content {
+	width: calc(100% - 400px);
+	padding-left: 20px;
+}
+
+.desc__text p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	padding-bottom: 2em;
+}
+
+.desc__text h1,
+.desc__text h2,
+.desc__text h3,
+.desc__text h4,
+.desc__text h5,
+.desc__text h6 {
+	margin-bottom: 1em;
+}
+
+.desc__text h1 {
+	font-size: 30px;
+}
+
+.desc__text h2 {
+	font-size: 26px;
+}
+
+.desc__text h3 {
+	font-size: 22px;
+}
+
+.desc__text h4,
+.desc__text h5,
+.desc__text h6 {
+	font-size: 18px;
+}
+
+.desc__text li {
+	list-style-position: inside;
+	font-size: 18px;
+	line-height: 1.35;
+	color: #292929;
+}
+
+.desc__text ul,
+.desc__text ol {
+	padding: 1em 0;
+	margin: 0;
+}
+
+.desc__text ol > li {
+	list-style-type: decimal;
+}
+
+.desc__text ul > li {
+	list-style-type: disc;
+}
+
+.desc__row {
+	display: flex;
+}
+
+.desc__inner {
+	display: flex;
+	width: calc(100% - 150px);
+}
+
+.desc__col {
+	width: 50%;
+}
+
+.desc__share {
+	position: relative;
+	z-index: 11;
+	cursor: pointer;
+	display: inline-block;
+	align-self: baseline;
+	width: 150px;
+	color: #fff;
+}
+
+.desc__author,
+.desc__count,
+.desc__view,
+.desc__time {
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1150px) {
+
+.desc__row {
+	display: block;
+}
+
+.desc__inner {
+	width: 100%;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.desc__title {
+	font-size: 25px;
+}
+
+.desc__image {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.desc__content {
+	width: 100%;
+	padding-left: 0px;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.desc__wrap {
+	display: block;
+}
+
+}
+

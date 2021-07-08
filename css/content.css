@@ -1,0 +1,34 @@
+.desc .page-contacts__list li,
+.desc .page-contacts__list li a {
+	color: #e17358;
+}
+
+.desc__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.desc__block {
+	display: flex;
+	align-items: center;
+}
+
+.desc__data,
+.desc__update {
+	color: #e17358;
+	margin-bottom: 15px;
+}
+
+.desc__data {
+	margin-right: 20px;
+}
+
+.desc__holder {
+	display: flex;
+}
+
+.desc__image img {
+	display: block;
+}
+

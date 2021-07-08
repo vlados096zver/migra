@@ -1,0 +1,119 @@
+@import 'responsive'
+
+.desc
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+media(sm)
+			display: block
+
+	&__block
+		display: flex
+		align-items: center
+
+	&__data,
+	&__update
+		color: #fff
+		margin-bottom: 15px
+
+	&__data
+		margin-right: 25px
+
+	&__title
+		font-size: 36px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 1em
+		font-weight: 900
+		+media(md)
+			font-size: 25px
+
+	&__holder
+		display: flex
+		flex-wrap: wrap
+	
+	&__image
+		width: 400px
+		+media(md)
+			width: 100%
+			max-width: 400px
+			margin: 0 auto
+			margin-bottom: 40px
+		img
+			display: block
+
+	&__content
+		width: calc(100% - 400px)
+		padding-left: 20px
+		+media(md)
+			width: 100%
+			padding-left: 0px
+
+	&__text
+		p
+			font-size: 16px
+			line-height: 1.5
+			color: #fff
+			padding-bottom: 2em
+
+		h1, h2, h3, h4, h5, h6
+			margin-bottom: 1em
+
+		h1
+			font-size: 30px
+		h2
+			font-size: 26px
+		h3
+			font-size: 22px
+
+		h4, h5, h6
+			font-size: 18px
+
+		li
+			list-style-position: inside
+			font-size: 18px
+			line-height: 1.35
+			color: #292929
+
+		ul, ol
+			padding: 1em 0
+			margin: 0
+
+		ol > li
+			list-style-type: decimal
+
+		ul > li
+			list-style-type: disc
+
+	&__row
+		display: flex
+		+media(lgxs)
+			display: block
+
+	&__inner
+		display: flex
+		width: calc(100% - 150px)
+		+media(lgxs)
+			width: 100%
+
+	&__col
+		width: 50%
+
+	&__share
+		position: relative
+		z-index: 11
+		cursor: pointer
+		display: inline-block
+		align-self: baseline
+		width: 150px
+		color: #fff
+
+	&__author,
+	&__count,
+	&__view,
+	&__time
+		font-size: 16px
+		color: #fff
+		margin-bottom: 15px
