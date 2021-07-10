@@ -64,6 +64,12 @@
 	padding-bottom: 5px;
 }
 
+.single__text ul li::marker,
+.single__text ol li::marker {
+	color: #e17358;
+	font-size: 1.3em;
+}
+
 .single__text a {
 	color: #e17358;
 	transition: 0.3s color;
@@ -332,6 +338,14 @@
 .select__item--active {
 	background-color: #e99783;
 	color: #fff;
+}
+
+.request {
+	margin: 50px 0 30px;
+}
+
+.request .inner-request {
+	max-height: unset;
 }
 
 @media screen and (max-width: 960px) {

@@ -4,7 +4,6 @@
 	align-items: center;
 	font-size: 14px;
 	color: #fff;
-	margin: 0 -7px;
 	margin-bottom: 15px;
 }
 
@@ -16,8 +15,12 @@
 .breadcrumbs span {
 	font-size: 14px;
 	line-height: 1.7;
-	color: #fff;
+	color: #e17358;
 	text-transform: uppercase;
+}
+
+.breadcrumbs span {
+	color: #fff;
 	color: #e17358;
 }
 
@@ -42,11 +45,19 @@
 	color: #fff;
 }
 
+.page-contacts__list li a span {
+	color: #e17358;
+}
+
+.page-contacts__list li span {
+	color: #fff;
+}
+
 .page-contacts__list li,
 .page-contacts__list a {
 	font-size: 14px;
 	line-height: 1.7;
-	color: #fff;
+	color: #e17358;
 }
 
 .page-contacts__title {
@@ -281,6 +292,10 @@
 	font-size: 30px;
 	text-transform: uppercase;
 	color: #fff;
+}
+
+.meta__info p a {
+	color: #e17358;
 }
 
 .meta__text {

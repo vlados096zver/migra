@@ -1,3 +1,7 @@
+.blog {
+	overflow: hidden;
+}
+
 .blog__title {
 	font-size: 30px;
 	line-height: 1;

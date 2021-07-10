@@ -1,0 +1,152 @@
+.conversion {
+	position: sticky;
+	z-index: 11;
+	top: 54px;
+	background-color: #e17358;
+	transition: 0.3s background-color;
+}
+
+.conversion .main-nav__toggle {
+	display: none;
+}
+
+.conversion.is-fixed {
+	background-color: #fff;
+}
+
+.conversion.is-fixed .conversion__title {
+	color: #010310;
+}
+
+.conversion.is-fixed .conversion__wrap {
+	display: flex;
+	align-items: center;
+}
+
+.conversion.is-fixed .conversion__list {
+	display: flex;
+}
+
+.conversion.is-fixed .conversion__list li:not(:last-child) {
+	margin-bottom: 0px;
+}
+
+.conversion.is-fixed .conversion__list .conversion__link {
+	font-weight: bold;
+}
+
+.conversion.is-fixed .conversion__list .conversion__link:hover:not(.conversion__link--active) {
+	color: #e17358;
+}
+
+.conversion.is-fixed .conversion__list .conversion__link--active {
+	color: #e17358;
+}
+
+.conversion__wrap {
+	padding: 10px 20px;
+	padding-bottom: 0px;
+}
+
+.conversion__title {
+	font-size: 19px;
+	color: #fff;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	font-weight: 500;
+}
+
+.conversion__list {
+	padding-bottom: 10px;
+}
+
+.conversion__list li:not(:last-child) {
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.conversion__link {
+	display: inline-block;
+	font-size: 16px;
+	color: #010310;
+	font-weight: normal;
+	transition: 0.3s color;
+}
+
+.conversion__link--active {
+	color: #fff;
+}
+
+.conversion__link:hover:not(.conversion__link--active) {
+	color: #fff;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1430px) {
+
+.conversion {
+	top: 44px;
+}
+
+}
+
+@media screen and (max-width: 1350px) {
+
+.conversion {
+	top: 40px;
+}
+
+.conversion .main-nav__toggle {
+	display: block;
+	margin-bottom: 7px;
+}
+
+.conversion.is-fixed .conversion__wrap {
+	display: flex;
+	margin-bottom: 0px;
+}
+
+.conversion.is-fixed .conversion__list {
+	display: none;
+	background-color: #fff;
+}
+
+.conversion.is-fixed .conversion__list li:not(:last-child) {
+	margin-bottom: 12px;
+}
+
+.conversion.is-fixed .line-burger,
+.conversion.is-fixed .line-burger:after,
+.conversion.is-fixed .line-burger:before {
+	background-color: #e17358;
+}
+
+.conversion__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.conversion__list {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	background-color: #e17358;
+}
+
+.conversion__link {
+	padding: 0 20px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+.conversion__title {
+	font-size: 17px;
+}
+
+}
+

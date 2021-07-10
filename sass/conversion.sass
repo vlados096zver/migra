@@ -1,0 +1,103 @@
+@import 'responsive'
+
+.conversion
+	position: sticky
+	z-index: 11
+	top: 54px
+	background-color: #e17358
+	transition: 0.3s background-color
+	+media(lg)
+		top: 44px
+	+media(lgm)
+		top: 40px
+	
+	.main-nav__toggle
+		display: none
+		+media(lgm)
+			display: block
+			margin-bottom: 7px
+
+	&.is-fixed
+		background-color: #fff
+		.conversion__title
+			color: #010310
+		
+		.conversion__wrap
+			display: flex
+			align-items: center
+			+media(lgm)
+				display: flex
+				margin-bottom: 0px
+			
+
+		.conversion__list
+			display: flex
+			+media(lgm)
+				display: none
+				background-color: #fff
+			li:not(:last-child)
+				margin-bottom: 0px
+				+media(lgm)
+					margin-bottom: 12px
+
+			.conversion__link
+				font-weight: bold
+				&:hover:not(.conversion__link--active)
+					color: #e17358
+
+			.conversion__link--active
+				color: #e17358
+
+
+
+		.line-burger,
+		.line-burger:after,
+		.line-burger:before
+			+media(lgm)
+				background-color: #e17358
+
+	&__wrap
+		padding: 10px 20px
+		padding-bottom: 0px
+		+media(lgm)
+			display: flex
+			justify-content: space-between
+			align-items: center
+		
+
+	&__title
+		font-size: 19px
+		color: #fff
+		margin-right: 20px
+		padding-bottom: 10px
+		font-weight: 500
+		+media(xxs)
+			font-size: 17px
+
+	&__list
+		padding-bottom: 10px
+		+media(lgm)
+			display: none
+			position: absolute
+			top: 100%
+			left: 0px
+			width: 100%
+			background-color: #e17358
+		li:not(:last-child)
+			margin-right: 20px
+			margin-bottom: 10px
+
+	&__link
+		display: inline-block
+		font-size: 16px
+		color: #010310
+		font-weight: normal
+		transition: 0.3s color
+		+media(lgm)
+			padding: 0 20px
+		&--active
+			color: #fff
+		&:hover:not(.conversion__link--active)
+			color: #fff
+			text-decoration: underline
+		

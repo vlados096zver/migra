@@ -91,9 +91,19 @@
 	line-height: 1.5;
 }
 
+.editor ul li::marker {
+	color: #e17358;
+	font-size: 1.3em;
+}
+
 .editor ol li {
 	margin-bottom: 1em;
 	line-height: 1.5;
+}
+
+.editor ol li::marker {
+	color: #e17358;
+	font-size: 1.3em;
 }
 
 .editor ul li:last-of-type,

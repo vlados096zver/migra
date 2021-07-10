@@ -6,7 +6,7 @@
 	align-items: center
 	font-size: 14px
 	color: #fff
-	margin: 0 -7px
+	// margin: 0 -7px
 	margin-bottom: 15px
 
 	& > span
@@ -16,10 +16,13 @@
 	span
 		font-size: 14px
 		line-height: 1.7
-		color: #fff
+		color: #e17358
 		text-transform: uppercase
 
-	 a:hover span
+	span
+		color: #fff
+
+	 a:hover
 		color: #e17358
 
 
@@ -39,10 +42,17 @@
 					margin-left: 9px
 					content: '/'
 					color: #fff
+
+				span
+					color: #e17358
+
+			span
+				color: #fff
+
 		li, a
 			font-size: 14px
 			line-height: 1.7
-			color: #fff
+			color: #e17358
 
 	&__title
 		font-size: 36px
@@ -295,6 +305,9 @@
 			span
 				+media(mini)
 					display: block
+
+			a
+				color: #e17358
 
 	&__text
 		font-size: 30px

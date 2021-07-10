@@ -4,7 +4,7 @@
 
 .main-footer__wrap {
 	background-color: #ececec;
-	padding: 25px 35px;
+	padding: 25px 25px 10px;
 }
 
 .main-footer__wrap .main-header__info {
@@ -56,6 +56,7 @@
 	line-height: 1.2;
 	color: #a8a8a8;
 	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 .main-footer__desc p a {
@@ -259,10 +260,6 @@
 }
 
 @media screen and (max-width: 1430px) {
-
-.main-footer__wrap {
-	padding: 25px 25px;
-}
 
 .main-footer__wrap .main-header__title {
 	font-size: 22px;

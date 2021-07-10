@@ -5,7 +5,7 @@
 	&__wrap
 		display: flex
 		justify-content: space-between
-		align-items: center
+		align-items: flex-start
 		+media(sm)
 			display: block
 
@@ -15,8 +15,11 @@
 
 	&__data,
 	&__update
-		color: #fff
+		color: #e17358
 		margin-bottom: 15px
+
+		span
+			color: #fff
 
 	&__data
 		margin-right: 25px
@@ -52,40 +55,141 @@
 			padding-left: 0px
 
 	&__text
+		color: #fff
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+			margin: 1em 0
+			font-weight: 900
+			text-transform: uppercase
+			text-align: center
+
+		h1, 
+		h2
+			font-size: 36px
+			+media(xs)
+				font-size: 26px
+
+		h3
+			font-size: 30px
+			+media(xs)
+				font-size: 22px
+
+		h4, 
+		h5, 
+		h6
+			font-size: 24px
+			+media(xs)
+				font-size: 18px
+
 		p
 			font-size: 16px
 			line-height: 1.5
 			color: #fff
-			padding-bottom: 2em
-
-		h1, h2, h3, h4, h5, h6
 			margin-bottom: 1em
+			text-align: justify
 
-		h1
-			font-size: 30px
-		h2
-			font-size: 26px
-		h3
-			font-size: 22px
+		a
+			color: #e17358
+			transition: 0.2s ease-out
+			text-decoration: underline
 
-		h4, h5, h6
-			font-size: 18px
-
-		li
-			list-style-position: inside
-			font-size: 18px
-			line-height: 1.35
-			color: #292929
+			&:hover 
+				text-decoration: none
 
 		ul, ol
-			padding: 1em 0
-			margin: 0
+			margin: 1.5em 0
+			padding-left: 30px
 
-		ol > li
-			list-style-type: decimal
+		ul li
+			list-style: disc
+			margin-bottom: 1em
+			line-height: 1.5
 
-		ul > li
-			list-style-type: disc
+			&::marker
+				color: #e17358
+				font-size: 1.3em
+
+		ol li
+			margin-bottom: 1em
+			line-height: 1.5
+
+			&::marker
+				color: #e17358
+				font-size: 1.3em
+
+		ul li:last-of-type,
+		ol li:last-of-type
+			margin-bottom: 0
+
+		blockquote
+			border: 2px dashed #e17358
+			padding: 30px
+			font-style: italic
+			margin: 2em 0
+			+media(xs)
+				padding: 15px
+
+			p:last-of-type
+				margin-bottom: 0
+
+		img, img.aligncenter
+			display: block
+			margin: 2em auto
+
+		img
+			&.alignleft
+				display: inline
+				float: left
+				margin: 0 1.5em 1em 0
+				+media(lgs)
+					float: none
+					display: block
+					margin: 2em auto
+
+			&.alignright
+				display: inline
+				float: right
+				margin: 0 0 1em 1.5em
+				+media(lgs)
+					float: none
+					display: block
+					margin: 2em auto
+
+
+			&.aligncenter
+				clear: both
+				display: block
+				margin-left: auto
+				margin-right: auto
+
+		table 
+			// min-width: 600px
+			width: 100%
+
+			thead th,
+			thead td,
+			tbody th,
+			tbody td 
+				font-size: 16px
+				line-height: 1.5
+				padding: 12px 20px
+				border: 1px solid #fff
+				font-weight: normal
+
+			thead td,
+			tbody td 
+				color: #fff
+
+			thead th,
+			thead td 
+				color: #010310
+				background-color: #fff
+				text-transform: uppercase
 
 	&__row
 		display: flex
@@ -105,15 +209,44 @@
 		position: relative
 		z-index: 11
 		cursor: pointer
-		display: inline-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-end
 		align-self: baseline
 		width: 150px
 		color: #fff
+
+		p
+			width: 100%
+			text-align: right
+			margin-bottom: 15px
+
+		a, i
+			color: #fff
+
+		a:not(:first-child)
+			margin-left: 10px
 
 	&__author,
 	&__count,
 	&__view,
 	&__time
 		font-size: 16px
-		color: #fff
+		color: #e17358
 		margin-bottom: 15px
+
+		span
+			color: #fff
+
+	&__author
+		display: flex
+		align-items: center
+
+		span
+			display: flex
+			align-items: center
+
+		img
+			display: block
+			width: 20px
+			margin-right: 5px

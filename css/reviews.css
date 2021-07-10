@@ -16,6 +16,7 @@
 	border-radius: 10px;
 	padding: 20px;
 	margin-bottom: 30px;
+	background-color: #fff;
 }
 
 .reviews__item--answer {
@@ -37,18 +38,18 @@
 }
 
 .reviews__fio {
-	color: #fff;
+	color: #212121;
 	margin-right: 13px;
 }
 
 .reviews__date {
-	color: #fff;
+	color: #212121;
 }
 
 .reviews__text p {
 	font-size: 16px;
 	line-height: 1.9;
-	color: #fff;
+	color: #212121;
 }
 
 @media screen and (max-width: 780px) {

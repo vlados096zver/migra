@@ -1,4 +1,56 @@
+
 $(document).ready(function () {
+
+const block = $('.conversion');
+window.addEventListener('scroll', () => {
+  const { top } = block[0].getBoundingClientRect();
+  let menuHeight = $('.main-header__menu').height();
+  block.toggleClass('is-fixed', top === menuHeight);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+
+      let link = $('.conversion__link');
+      link.each(function(index, item) {
+        let elem = $(item).attr('href').replace('#', '');
+        let id = entry.target.id;
+        if (elem == id) {
+          $(item).addClass('conversion__link--active');
+        } else {
+          $(item).removeClass('conversion__link--active');
+        }
+      });
+    }
+  });
+}, {
+  threshold: 0.7
+});
+
+let titles = $('.editor h2');
+let list = $('.conversion__list');
+for (let title of titles) {
+  observer.observe(title)
+  $(title).attr('id', `${title.outerText.replace(/\s/gi, "_")}`);
+  let link = $(`<li><a href="${'#'+title.outerText.replace(/\s/gi, "_")}" class="conversion__link">${title.outerText}</li>`);
+  list.append(link);
+}
+
+$('.conversion__link').click(function() {
+  let elems = $('.conversion__link');
+  elems.each(function(index, item) {
+    $(item).removeClass('conversion__link--active')
+  });
+  $(this).addClass('conversion__link--active');
+  var target = $(this).attr('href');
+  $('html, body').animate({
+    scrollTop: $(target).offset().top - $('.main-header__menu').height() - $('.conversion').height()
+  }, 800);
+  return false;
+});
+
 
 // faq items
 $('.faq-item-header').click(function(){
@@ -7,8 +59,13 @@ $('.faq-item-header').click(function(){
 });
 
 $('.mobile-wrap').on('click', function () {
-    $('.line-burger').toggleClass('line-active');
+    $('.main-header .line-burger').toggleClass('line-active');
     $('.main-header__list').slideToggle();
+});
+
+$('.conversion .main-nav__toggle').on('click', function () {
+    $('.conversion .line-burger').toggleClass('line-active');
+    $('.conversion__list').slideToggle();
 });
 
 $('.fixed__up').on('click', function() {
@@ -16,9 +73,11 @@ $('.fixed__up').on('click', function() {
 });
 
 $(window).resize(function () {
-    if ($(window).width() >= 1349) {
+    if ($(window).width() > 1349) {
         $('.main-header__list').attr('style', '');
-        $('.line-burger').removeClass('line-active');
+        $('.main-header .line-burger').removeClass('line-active');
+        $('.conversion__list').attr('style', '');
+        $('.conversion .line-burger').removeClass('line-active');
     }
 });
 
