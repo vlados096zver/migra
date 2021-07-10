@@ -10,10 +10,8 @@ window.addEventListener('scroll', () => {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-
+    let link = $('.conversion__link');
     if (entry.isIntersecting) {
-
-      let link = $('.conversion__link');
       link.each(function(index, item) {
         let elem = $(item).attr('href').replace('#', '');
         let id = entry.target.id;
@@ -23,10 +21,14 @@ const observer = new IntersectionObserver((entries) => {
           $(item).removeClass('conversion__link--active');
         }
       });
+    } else {
+        link.each(function(index, item) {
+            $(item).removeClass('conversion__link--active');
+        });
     }
   });
 }, {
-  threshold: 0.7
+  threshold: 0.3
 });
 
 let titles = $('.editor h2');
