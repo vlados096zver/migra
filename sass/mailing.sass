@@ -1,0 +1,81 @@
+@import 'responsive'
+
+.mailing
+	padding-bottom: 15px
+	&__wrap
+		padding: 0 10px
+		+media(lgm)
+			padding: 0px
+
+	&__title
+		font-size: 34px
+		font-weight: 900
+		text-transform: uppercase
+		color: #fff
+		text-align: center
+		margin-bottom: 50px
+		+media(sm)
+			font-size: 24px	
+
+	&__form
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		overflow: hidden
+		margin: 0 -15px
+		+media(sm)
+			margin: 0px
+
+	&__box
+		display: flex
+		justify-content: center
+		width: calc(100% / 3 - 30px)
+		margin: 0 15px
+		margin-bottom: 30px
+		+media(sm)
+			width: 100%
+			margin: 0px
+			margin-bottom: 30px
+
+	&__input 
+		display: block
+		width: 100%
+		font-size: 16px
+		color: #fff
+		border: 1px solid #fff
+		background-color: transparent
+		outline: none
+		padding: 12px 20px
+		&::placeholder
+			color: #fff
+
+	&__btn
+		display: block
+		width: 100%
+		font-size: 16px
+		color: #e17358
+		padding: 12px 10px
+		border: 1px solid #fff
+		outline: none
+		text-align: center
+		background-color: transparent
+		transition: 0.3s background-color, 0.3s color, 0.3s border-color
+
+	&__btn[disabled]
+		cursor: default
+		opacity: 0.5
+		text-decoration: line-through
+
+	&__btn:not(:disabled)
+		&:hover
+			cursor: pointer
+			background-color: #e17358
+			color: #fff
+			border-color: #e17358
+
+	&__error
+		padding-left: 20px
+		padding-bottom: 12px
+		color: #8B0000
+		text-transform: uppercase
+		font-weight: 900

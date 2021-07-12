@@ -278,6 +278,9 @@ var regName = /^[a-zA-Zа-яА-ЯёЁ]+/;
 var regPhone = /\d+/i;
 var regEmail = /[-.\w]+@[-.\w]+\.[-.\w]+/i;
 
+validate('#m_email', 1, regEmail, '.mailing__error--email');
+disBtn('#m_email', '.mailing__btn');
+
 // пример использования
 
 $('.contacts__btn').on('click', function() {
