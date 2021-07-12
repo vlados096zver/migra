@@ -4233,11 +4233,17 @@ img {
 }
 
 .mailing {
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 }
 
 .mailing__wrap {
 	padding: 0 10px;
+}
+
+.mailing__block {
+	padding: 0 20px;
+	padding-top: 20px;
+	background-color: #fff;
 }
 
 .mailing__title {
@@ -4246,7 +4252,7 @@ img {
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 }
 
 .mailing__form {
@@ -4270,8 +4276,8 @@ img {
 	width: 100%;
 	font-size: 16px;
 	color: #fff;
-	border: 1px solid #fff;
-	background-color: transparent;
+	background-color: #010310;
+	border: none;
 	outline: none;
 	padding: 12px 20px;
 }
@@ -4284,12 +4290,12 @@ img {
 	display: block;
 	width: 100%;
 	font-size: 16px;
-	color: #e17358;
+	color: #fff;
 	padding: 12px 10px;
-	border: 1px solid #fff;
 	outline: none;
+	border: none;
 	text-align: center;
-	background-color: transparent;
+	background-color: #e17358;
 	transition: 0.3s background-color, 0.3s color, 0.3s border-color;
 }
 
@@ -4303,7 +4309,6 @@ img {
 	cursor: pointer;
 	background-color: #e17358;
 	color: #fff;
-	border-color: #e17358;
 }
 
 .mailing__error {
