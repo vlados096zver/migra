@@ -4,6 +4,7 @@
 	position: sticky
 	z-index: 11
 	top: 54px
+	margin: 0 auto
 	background-color: #e17358
 	transition: 0.3s background-color
 	+media(lg)
@@ -13,42 +14,63 @@
 	
 	.main-nav__toggle
 		display: none
-		+media(lgm)
+		+media(xs)
 			display: block
 			margin-bottom: 7px
 
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 20px
+		flex-shrink: 0
+		+media(lgm)
+			padding-top: 20px
+
+	&:not(.is-fixed)
+		.hamburger_wraper
+			display: none
+
+		.hidden-links
+			display: none
+
 	&.is-fixed
 		background-color: #fff
+
+		.container
+			max-width: 100%
+
 		.conversion__title
 			color: #010310
+			padding-left: 10px
+
+		.visible-links
+			display: flex
+			+media(xs)
+				display: none
+
+			.conversion__link
+				white-space: nowrap
+
+		.hidden-links
+			background-color: #fff
 		
-		.conversion__wrap
+		.conversion__holder
 			display: flex
 			align-items: center
 			+media(lgm)
-				display: flex
-				margin-bottom: 0px
+				position: relative
 			
-
-		.conversion__list
-			display: flex
+		.conversion__link
+			color: #292929
+			font-weight: bold
 			+media(lgm)
-				display: none
-				background-color: #fff
-			li:not(:last-child)
-				margin-bottom: 0px
-				+media(lgm)
-					margin-bottom: 12px
-
-			.conversion__link
-				font-weight: bold
-				&:hover:not(.conversion__link--active)
-					color: #e17358
-
-			.conversion__link--active
+				margin: 0 10px
+			&:hover:not(.conversion__link--active)
 				color: #e17358
 
-
+		.conversion__link--active
+			color: #e17358
 
 		.line-burger,
 		.line-burger:after,
@@ -56,23 +78,23 @@
 			+media(lgm)
 				background-color: #e17358
 
-	&__wrap
-		padding: 10px 20px
-		padding-bottom: 0px
-		+media(lgm)
-			display: flex
-			justify-content: space-between
-			align-items: center
-		
+		.visible-links .conversion__link
+			white-space: nowrap
+
+		.conversion__link--hidden,
+		.main-nav__toggle
+			display: none
 
 	&__title
 		font-size: 19px
 		color: #fff
 		margin-right: 20px
-		padding-bottom: 10px
+		padding-bottom: 20px
 		font-weight: 500
 		+media(xxs)
-			font-size: 17px
+			font-size: 16px
+
+		
 
 	&__list
 		padding-bottom: 10px
@@ -87,17 +109,126 @@
 			margin-right: 20px
 			margin-bottom: 10px
 
-	&__link
-		display: inline-block
-		font-size: 16px
-		color: #010310
-		font-weight: normal
-		transition: 0.3s color
+	&__nav 
+		display: flex
+		flex-basis: 100%
 		+media(lgm)
-			padding: 0 20px
+			margin-right: 10px
+
+	&__link
+		display: block 
+		font-size: 18px 
+		color: #292929
+		text-decoration: none
+		padding: 10px 0
+		margin-right: 40px
+		transition: 0.3s color 
+		+media(lgm)
+			display: inline-block
+			padding: 10px 0
+		&:hover 
+			color: #ef6c00 
+
 		&--active
 			color: #fff
 		&:hover:not(.conversion__link--active)
 			color: #fff
 			text-decoration: underline
-		
+
+
+.hidden-links 
+	position: absolute 
+	display: flex
+	flex-direction: column
+	right: 0px 
+	top: 100% 
+	padding-top: 10px
+	background-color: #e17358
+	+media(lgm)
+		width: calc(100% + 20px)
+		right: -10px
+	li 
+		display: block
+		padding: 0 20px
+		+media(lgm)
+			padding: 0 10px
+		a
+			display: inline-block
+
+.hidden 
+	visibility: hidden 
+	display: none
+	+media(xs)
+		display: none
+
+.hamburger_wraper
+	position: absolute 
+	height: 100% 
+	width: 72px
+	top: 0px
+	right: 0 
+	padding: 0 10px 
+	border: 0 
+	outline: none 
+	background-color: #fff
+	color: #292929
+	cursor: pointer 
+	transition: 0.3s background-color, 0.3s color
+	+media(lgm)
+		position: relative
+		width: 25px
+		height: 25px
+		padding: 0px
+		margin-left: auto
+
+	.line-active
+		&:after
+			top: 9px
+
+		&:before
+			bottom: 9px
+
+.hamburger 
+	position: relative 
+	font-size: 15px
+	margin: auto 
+	+media(lgm)
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		width: 25px
+		height: 3px
+		background-color: #e17358
+		transition: 0.5s width
+		font-size: 0px
+	&:before, 
+	&:after
+		display: none
+		content: ''
+		position: absolute
+		width: 25px
+		height: 3px
+		background-color: #fff
+		left: 0
+		transition: 0.5s
+		+media(lgm)
+			display: block
+			background-color: #e17358
+
+	&:before
+		bottom: calc(100% + 5px)
+
+	&:after
+		top: calc(100% + 5px)
+
+	&.line-active
+		width: 0
+		&:after
+			top: 9px
+			transform: rotate(-45deg)
+			transform-origin: 0 0
+		&:before
+			bottom: 9px
+			transform: rotate(45deg)
+			transform-origin: 0 100%
