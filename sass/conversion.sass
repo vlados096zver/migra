@@ -4,6 +4,7 @@
 	position: sticky
 	z-index: 11
 	top: 54px
+	max-width: 1200px
 	margin: 0 auto
 	background-color: #e17358
 	transition: 0.3s background-color
@@ -11,21 +12,13 @@
 		top: 44px
 	+media(lgm)
 		top: 40px
-	
-	.main-nav__toggle
-		display: none
-		+media(xs)
-			display: block
-			margin-bottom: 7px
 
 	&__block
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding-top: 20px
+		padding: 11px 0
 		flex-shrink: 0
-		+media(lgm)
-			padding-top: 20px
 
 	&:not(.is-fixed)
 		.hamburger_wraper
@@ -35,6 +28,7 @@
 			display: none
 
 	&.is-fixed
+		max-width: 100%
 		background-color: #fff
 
 		.container
@@ -43,6 +37,11 @@
 		.conversion__title
 			color: #010310
 			padding-left: 10px
+			margin-left: 0px
+			+media(lgm)
+				text-transform: uppercase
+				font-weight: bold
+				padding-left: 0px
 
 		.visible-links
 			display: flex
@@ -60,17 +59,28 @@
 			align-items: center
 			+media(lgm)
 				position: relative
+
+		.conversion__block
+			padding: 16px 0
+			+media(lg)
+				padding: 11px 0
+			+media(lgm)
+				padding: 10px 0
 			
 		.conversion__link
 			color: #292929
+			padding: 18px 10px
 			font-weight: bold
+			+media(lg)
+				padding: 13px 10px
 			+media(lgm)
-				margin: 0 10px
+				padding: 7px 10px
 			&:hover:not(.conversion__link--active)
 				color: #e17358
 
 		.conversion__link--active
-			color: #e17358
+			background-color: #e17358
+			color: #fff
 
 		.line-burger,
 		.line-burger:after,
@@ -81,20 +91,21 @@
 		.visible-links .conversion__link
 			white-space: nowrap
 
-		.conversion__link--hidden,
-		.main-nav__toggle
+		.conversion__link--hidden
 			display: none
 
 	&__title
 		font-size: 19px
 		color: #fff
+		margin-left: 10px
 		margin-right: 20px
-		padding-bottom: 20px
 		font-weight: 500
+		+media(lgm)
+			font-size: 17px
 		+media(xxs)
 			font-size: 16px
-
-		
+		+media(mini)
+			font-size: 14px
 
 	&__list
 		padding-bottom: 10px
@@ -117,15 +128,15 @@
 
 	&__link
 		display: block 
-		font-size: 18px 
+		font-size: 15px 
 		color: #292929
 		text-decoration: none
-		padding: 10px 0
-		margin-right: 40px
+		padding: 11px 10px
+		margin-right: 20px
 		transition: 0.3s color 
 		+media(lgm)
 			display: inline-block
-			padding: 10px 0
+			padding: 10px
 		&:hover 
 			color: #ef6c00 
 
@@ -142,18 +153,20 @@
 	flex-direction: column
 	right: 0px 
 	top: 100% 
-	padding-top: 10px
 	background-color: #e17358
 	+media(lgm)
 		width: calc(100% + 20px)
 		right: -10px
 	li 
 		display: block
-		padding: 0 20px
-		+media(lgm)
-			padding: 0 10px
+
 		a
 			display: inline-block
+			margin-right: 0px
+			+media(lgm)
+				display: block
+				padding: 0 20px
+				
 
 .hidden 
 	visibility: hidden 
