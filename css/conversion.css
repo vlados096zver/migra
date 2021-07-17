@@ -6,6 +6,10 @@
 	margin: 0 auto;
 	background-color: #e17358;
 	transition: 0.3s background-color;
+	border-radius: 4px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	padding-bottom: 10px;
 }
 
 .conversion__block {
@@ -27,6 +31,9 @@
 .conversion.is-fixed {
 	max-width: 100%;
 	background-color: #fff;
+	border-radius: 0;
+	margin: 0;
+	padding-bottom: 0;
 }
 
 .conversion.is-fixed .container {
@@ -37,6 +44,7 @@
 	color: #010310;
 	padding-left: 10px;
 	margin-left: 0px;
+	text-transform: uppercase;
 }
 
 .conversion.is-fixed .visible-links {
@@ -49,6 +57,10 @@
 
 .conversion.is-fixed .hidden-links {
 	background-color: #fff;
+}
+
+.conversion.is-fixed .hidden-links .conversion__link {
+	padding: 7px 10px;
 }
 
 .conversion.is-fixed .conversion__holder {
@@ -110,7 +122,7 @@
 	font-size: 15px;
 	color: #292929;
 	text-decoration: none;
-	padding: 11px 10px;
+	padding: 5px 10px;
 	margin-right: 20px;
 	transition: 0.3s color;
 }
@@ -239,7 +251,6 @@
 }
 
 .conversion.is-fixed .conversion__title {
-	text-transform: uppercase;
 	font-weight: bold;
 	padding-left: 0px;
 }
@@ -281,7 +292,6 @@
 
 .conversion__link {
 	display: inline-block;
-	padding: 10px;
 }
 
 .hidden-links {
@@ -322,30 +332,24 @@
 
 }
 
-@media screen and (max-width: 560px) {
-
-.conversion.is-fixed .visible-links {
-	display: none;
-}
-
-.hidden {
-	display: none;
-}
-
-}
-
 @media screen and (max-width: 480px) {
 
 .conversion__title {
 	font-size: 16px;
+	padding-bottom: 1px;
 }
 
 }
 
 @media screen and (max-width: 400px) {
 
+.conversion.is-fixed .conversion__block {
+	padding: 12px 0;
+}
+
 .conversion__title {
 	font-size: 14px;
+	padding-bottom: 0;
 }
 
 }

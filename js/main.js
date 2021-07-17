@@ -107,12 +107,14 @@ window.addEventListener('scroll', () => {
     top
   } = $block[0].getBoundingClientRect();
   let menuHeight = $header__menu.height();
-  let is = top === menuHeight;
+  let is = top <= menuHeight;
+  console.log(top);
+  console.log(menuHeight)
   if ($block.hasClass('is-fixed')) {
     if (!is) {
       $block.removeClass('is-fixed');
       $bottom_block.css({
-        'margin-top': 0
+        'padding-top': 0
       });
     }
   } else {
@@ -120,7 +122,7 @@ window.addEventListener('scroll', () => {
       let h1 = $block.height();
       $block.addClass('is-fixed');
       $bottom_block.css({
-        'margin-top': h1 - $block.height()
+        'padding-top': h1 - $block.height()
       });
     }
   }
@@ -151,7 +153,7 @@ $('.conversion__nav').on("click", ".conversion__link", function() {
 if(window.matchMedia('(max-width: 1350px)').matches) {
     $('.conversion .hamburger_wraper').on('click', function () {
         $('.conversion .hamburger').toggleClass('line-active');
-        $('.visible-links').slideToggle();
+        //$('.visible-links').slideToggle();
     });
 }
 

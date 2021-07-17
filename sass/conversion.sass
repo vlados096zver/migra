@@ -8,6 +8,10 @@
 	margin: 0 auto
 	background-color: #e17358
 	transition: 0.3s background-color
+	border-radius: 4px
+	margin-top: 20px
+	margin-bottom: 40px
+	padding-bottom: 10px
 	+media(lg)
 		top: 44px
 	+media(lgm)
@@ -30,6 +34,9 @@
 	&.is-fixed
 		max-width: 100%
 		background-color: #fff
+		border-radius: 0
+		margin: 0
+		padding-bottom: 0
 
 		.container
 			max-width: 100%
@@ -38,21 +45,21 @@
 			color: #010310
 			padding-left: 10px
 			margin-left: 0px
+			text-transform: uppercase
 			+media(lgm)
-				text-transform: uppercase
 				font-weight: bold
 				padding-left: 0px
 
 		.visible-links
 			display: flex
-			+media(xs)
-				display: none
 
 			.conversion__link
 				white-space: nowrap
 
 		.hidden-links
 			background-color: #fff
+			.conversion__link
+				padding: 7px 10px
 		
 		.conversion__holder
 			display: flex
@@ -66,6 +73,8 @@
 				padding: 11px 0
 			+media(lgm)
 				padding: 10px 0
+			+media(mini)
+				padding: 12px 0
 			
 		.conversion__link
 			color: #292929
@@ -104,8 +113,10 @@
 			font-size: 17px
 		+media(xxs)
 			font-size: 16px
+			padding-bottom: 1px
 		+media(mini)
 			font-size: 14px
+			padding-bottom: 0
 
 	&__list
 		padding-bottom: 10px
@@ -131,17 +142,18 @@
 		font-size: 15px 
 		color: #292929
 		text-decoration: none
-		padding: 11px 10px
+		padding: 5px 10px
 		margin-right: 20px
 		transition: 0.3s color 
 		+media(lgm)
 			display: inline-block
-			padding: 10px
+
 		&:hover 
 			color: #ef6c00 
 
 		&--active
 			color: #fff
+			
 		&:hover:not(.conversion__link--active)
 			color: #fff
 			text-decoration: underline
@@ -171,8 +183,6 @@
 .hidden 
 	visibility: hidden 
 	display: none
-	+media(xs)
-		display: none
 
 .hamburger_wraper
 	position: absolute 

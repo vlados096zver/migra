@@ -92,7 +92,7 @@
 
 .blog__holder {
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	margin-top: auto;
 }
 
@@ -101,6 +101,12 @@
 	line-height: 1.7;
 	color: #1d1d1d;
 	text-transform: uppercase;
+}
+
+.blog__data span {
+	text-transform: none;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .blog__city {
