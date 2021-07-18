@@ -105,8 +105,8 @@ window.addEventListener('scroll', () => {
 	const {
 		top
 	} = $block[0].getBoundingClientRect();
-	let menuHeight = $header__menu.height();
-	let blockHight = $block.height()
+	let menuHeight = $header__menu.outerHeight(true);
+	let blockHight = $block.outerHeight(true)
 	let is = top <= menuHeight;
 	if ($block.hasClass('is-fixed')) {
 		if (!is) {
@@ -119,7 +119,7 @@ window.addEventListener('scroll', () => {
 		if (is) {
 			$block.addClass('is-fixed');
 			$block.css({
-				'margin-bottom': blockHight - $block.height()
+				'margin-bottom': blockHight - $block.outerHeight(true)
 			});
 		}
 	}

@@ -18,6 +18,7 @@
 
 .conversion .container {
 	background-color: #e17358;
+	border-radius: 4px;
 }
 
 .conversion:not(.is-fixed) .hamburger_wraper {
@@ -35,6 +36,9 @@
 .conversion.is-fixed .container {
 	max-width: 100%;
 	background-color: #fff;
+	border-radius: 0;
+	margin: 0;
+	padding-bottom: 0;
 }
 
 .conversion.is-fixed .conversion__title {
