@@ -101,32 +101,29 @@ $btn.on('click', function() {
 
 const $block = $('.conversion');
 const $header__menu = $('.main-header__menu');
-const $bottom_block = $(".conversion+div");
 window.addEventListener('scroll', () => {
-  const {
-    top
-  } = $block[0].getBoundingClientRect();
-  let menuHeight = $header__menu.height();
-  let is = top <= menuHeight;
-  console.log(top);
-  console.log(menuHeight)
-  if ($block.hasClass('is-fixed')) {
-    if (!is) {
-      $block.removeClass('is-fixed');
-      $bottom_block.css({
-        'padding-top': 0
-      });
-    }
-  } else {
-    if (is) {
-      let h1 = $block.height();
-      $block.addClass('is-fixed');
-      $bottom_block.css({
-        'padding-top': h1 - $block.height()
-      });
-    }
-  }
-  updateNav();
+	const {
+		top
+	} = $block[0].getBoundingClientRect();
+	let menuHeight = $header__menu.height();
+	let blockHight = $block.height()
+	let is = top <= menuHeight;
+	if ($block.hasClass('is-fixed')) {
+		if (!is) {
+			$block.removeClass('is-fixed');
+			$block.css({
+				'margin-bottom': ""
+			});
+		}
+	} else {
+		if (is) {
+			$block.addClass('is-fixed');
+			$block.css({
+				'margin-bottom': blockHight - $block.height()
+			});
+		}
+	}
+	updateNav();
 });
 
 
