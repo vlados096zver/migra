@@ -4347,6 +4347,8 @@ img {
 	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
 	transition: 0.3s background-color;
 }
 
