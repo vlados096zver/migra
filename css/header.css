@@ -34,11 +34,10 @@
 
 .main-header__title {
 	font-size: 22px;
-	line-height: 1;
+	line-height: 1.3;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 700;
-	padding-bottom: 8px;
 }
 
 .main-header__holder {
@@ -84,7 +83,7 @@
 }
 
 .main-header__phone {
-	min-width: 170px;
+	min-width: 185px;
 	align-self: center;
 	margin-right: 30px;
 }
@@ -258,6 +257,10 @@
 	max-width: 100% !important;
 }
 
+.main-header__navigation--fixed .menu__social {
+	display: flex;
+}
+
 .main-header__menu {
 	width: 100%;
 	background-color: #e17358;
@@ -379,7 +382,7 @@
 }
 
 .menu__social {
-	display: flex;
+	display: none;
 	align-items: center;
 	order: 1;
 	margin-left: auto;
