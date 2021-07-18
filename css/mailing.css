@@ -13,7 +13,7 @@
 }
 
 .mailing__title {
-	font-size: 30px;
+	font-size: 34px;
 	font-weight: 900;
 	text-transform: uppercase;
 	color: #fff;
@@ -40,14 +40,12 @@
 .mailing__input {
 	display: block;
 	width: 100%;
-	font-family: inherit;
 	font-size: 16px;
 	color: #fff;
 	background-color: #010310;
 	border: none;
 	outline: none;
-	padding: 15px 20px;
-	border-radius: 5px;
+	padding: 12px 20px;
 }
 
 .mailing__input::placeholder {
@@ -57,11 +55,9 @@
 .mailing__btn {
 	display: block;
 	width: 100%;
-	font-family: inherit;
 	font-size: 16px;
 	color: #fff;
-	padding: 15px 10px;
-	border-radius: 5px;
+	padding: 12px 10px;
 	outline: none;
 	border: none;
 	text-align: center;

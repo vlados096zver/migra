@@ -7,7 +7,6 @@
 	display: inline-block
 	width: 100%
 	margin: 0 auto
-	background-color: #e17358
 	transition: 0.3s background-color
 	+media(lg)
 		top: 44px
@@ -21,6 +20,9 @@
 		padding: 11px 0
 		flex-shrink: 0
 
+	.container
+		background-color: #e17358
+
 	&:not(.is-fixed)
 		.hamburger_wraper
 			display: none
@@ -30,10 +32,11 @@
 
 	&.is-fixed
 		max-width: 100%
-		background-color: #fff
+		
 
 		.container
 			max-width: 100%
+			background-color: #fff
 
 		.conversion__title
 			color: #010310

@@ -1,7 +1,7 @@
 @import 'responsive'
 
 .desc
-
+	padding-bottom: 20px
 	&__wrap
 		display: flex
 		justify-content: space-between
@@ -12,19 +12,11 @@
 	&__block
 		display: flex
 		align-items: center
-		+media(xs)
-			flex-wrap: wrap
 
 	&__data,
 	&__update
 		color: #e17358
 		margin-bottom: 15px
-		+media(sm)
-			width: 50%
-			margin-right: 0
-		+media(xs)
-			width: 100%
-			margin-bottom: 10px
 
 		span
 			color: #fff
@@ -209,13 +201,9 @@
 		width: calc(100% - 150px)
 		+media(lgxs)
 			width: 100%
-		+media(xs)
-			flex-wrap: wrap
 
 	&__col
 		width: 50%
-		+media(xs)
-			width: 100%
 
 	&__share
 		position: relative
@@ -227,16 +215,11 @@
 		align-self: baseline
 		width: 150px
 		color: #fff
-		+media(xs)
-			justify-content: flex-start
-			width: 100%
 
 		p
 			width: 100%
 			text-align: right
 			margin-bottom: 15px
-			+media(xs)
-				width: auto
 
 		a, i
 			color: #fff
@@ -251,8 +234,6 @@
 		font-size: 16px
 		color: #e17358
 		margin-bottom: 15px
-		+media(xs)
-			margin-bottom: 10px
 
 		span
 			color: #fff
@@ -269,15 +250,3 @@
 			display: block
 			width: 20px
 			margin-right: 5px
-
-.mobile__visible
-	display: none
-	+media(mdx)
-		display: none
-	+media(sm)
-		display: block
-
-.mobile__hidden
-	display: flex
-	+media(sm)
-		display: none

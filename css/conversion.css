@@ -5,7 +5,6 @@
 	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #e17358;
 	transition: 0.3s background-color;
 }
 
@@ -15,6 +14,10 @@
 	align-items: center;
 	padding: 11px 0;
 	flex-shrink: 0;
+}
+
+.conversion .container {
+	background-color: #e17358;
 }
 
 .conversion:not(.is-fixed) .hamburger_wraper {
@@ -27,11 +30,11 @@
 
 .conversion.is-fixed {
 	max-width: 100%;
-	background-color: #fff;
 }
 
 .conversion.is-fixed .container {
 	max-width: 100%;
+	background-color: #fff;
 }
 
 .conversion.is-fixed .conversion__title {
